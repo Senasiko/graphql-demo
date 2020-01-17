@@ -1,0 +1,26 @@
+type Query {
+  user(id: ID): User
+}
+
+type Mutation {
+  login(name: String!, password: String!): User
+  sendMessage(fromUserId: ID!, toUserId: ID!, content: String!): Message!
+}
+
+type Subscription {
+  messageAdded(toUserId: ID!): Message!
+}
+
+type User {
+  id: ID!
+  name: String
+  avatarUrl: String
+  email: String
+  phone: String
+}
+
+type Message {
+  fromUserId: String!
+  toUserId: String!
+  content: String!
+}

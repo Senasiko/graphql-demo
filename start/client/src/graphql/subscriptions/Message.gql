@@ -1,0 +1,6 @@
+#import "../fragments/Message.gql"
+subscription Message($id: ID!) {
+  messageAdded(toUserId: $id) {
+    ...MessageInfo
+  }
+}

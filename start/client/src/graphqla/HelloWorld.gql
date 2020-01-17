@@ -1,0 +1,11 @@
+fragment UserConcat on HW {
+  email(e: $ee)
+  phone
+}
+
+query Hello($name: String, $ee: Email!) {
+  hello {
+    name(name: $name)
+    ...UserConcat
+  }
+}

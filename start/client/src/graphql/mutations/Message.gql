@@ -1,0 +1,6 @@
+#import "../fragments/Message.gql"
+mutation Message($from: ID!, $to: ID!, $content: String!) {
+  sendMessage(fromUserId: $from, toUserId: $to, content: $content) {
+    ...MessageInfo
+  }
+}

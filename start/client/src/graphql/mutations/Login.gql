@@ -1,0 +1,7 @@
+#import "../fragments/UserBaseInfo.gql"
+
+mutation Login($name: String!, $password: String!) {
+  login(name: $name, password: $password) {
+    ...UserBaseInfo
+  }
+}

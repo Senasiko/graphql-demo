@@ -1,0 +1,5 @@
+fragment UserBaseInfo on User {
+  id
+  name
+  avatarUrl
+}

@@ -1,0 +1,7 @@
+#import "../fragments/UserBaseInfo.gql"
+#import "../fragments/UserContact.gql"
+
+query UserContact {
+  ...UserBaseInfo
+  ...UserContact
+}

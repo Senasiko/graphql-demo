@@ -1,0 +1,4 @@
+fragment UserContact on User {
+  phone
+  email
+}
